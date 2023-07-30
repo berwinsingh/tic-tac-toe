@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --main-heading:'Staatliches', cursive;
+    --secondary-heading: 'Poppins', sans-serif;
+}
+
+h1, h2{
+    font-family: var(--main-heading);
+}
+
+.main-container{    
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tic-tac{
+    border: 1.5px solid black;
+}
+
+.box{
+    border: 1px solid black;
+    border-left-width: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: aliceblue;
+}
+
+.box:active{
+    background-color: aliceblue;
+}
+
+.right{
+    border-right-width: 0;
+}
+
+.top{
+    border-top-width: 0;
+}
+
+.bottom{
+    border-bottom-width: 0;
+}
+
+.box>p{
+    font-family: var(--main-heading);
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.win{
+    background-color: rgba(0, 255, 34, 0.377);
+}
+
+.display{
+    display: none;
+}
+
+#player1,#player2{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#restart{
+    height: 100vh;
+    flex-direction: column;
+}

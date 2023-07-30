@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="main-container flex h-full items-center gap-4" id="player-details">
+        <h1 class="text-6xl select-none">Who are the fighters?</h1>
+        <h2 class="text-red-600 text-xl display select-none" id="warning">Please type in both player names!</h2>
+        <div class="flex player-names gap-2">
+            <input type="text" id="player1" name="player1" class="py-1 px-1" placeholder="Player 1" required>
+            <input type="text" id="player2" name="player2" class="py-1 px-1" placeholder="Player 2" required>
+        </div>
+        <button id="lets-play" class="bg-blue-700 btn-primary px-3 py-1 rounded-lg text-white drop-shadow-lg active:scale-95 hover:bg-blue-600">Let's Play</button>
+    </div>
+
+    <div class="main-container flex h-full items-center gap-4 display" id="tic-tac-game">
+        <h1 class="text-6xl select-none">Tic Tac Toe</h1>
+        <div class="tic-tac w-96 h-96 bg-white grid grid-cols-3 grid-rows-3 rounded-lg drop-shadow-lg">
+            <div class="box flex justify-center rounded-tl-lg" data-value="0">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center" data-value="1">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center rounded-tr-lg right" data-value="2">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center top" data-value="3">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center top" data-value="4">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center top right" data-value="5">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center top bottom rounded-bl-lg" data-value="6">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center top bottom" data-value="7">
+                <p class="text-5xl self-center"></p>
+            </div>
+            <div class="box flex justify-center top bottom right rounded-br-lg" data-value="8">
+                <p class="text-5xl self-center"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center px-96 display" id="restart">
+        <h2 class="text-2xl select-none self-center" id="winner">Winner?</h2>
+        <button type="button" class="bg-blue-700 px-3 py-1 rounded-md text-white mt-1 drop-shadow-lg mx-16" id="restart-btn">Restart</button>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
